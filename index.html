@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Interactive Todo List</title>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<!-- Add this in your <head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Manrope&family=Poppins&family=Space+Grotesk&family=DM+Sans&family=Rubik&family=Urbanist&family=Plus+Jakarta+Sans&family=Outfit&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body >
+ <button id="toggle-btn" title="Toggle Todo List" style="
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  left: auto;
+  font-size: 24px;
+  cursor: grab;
+  z-index: 1000;
+">+</button>
+
+  <div id="todo-content">
+<div id="app">
+  <div id="today-date" class="big-date"></div>
+
+  <h1> <i class="fa-solid fa-list-check" style="vertical-align: middle; margin-right: 8px;"></i>Interactive To-Do List</h1>
+ 
+  <form id="task-form">
+    <input type="text" id="task-input" placeholder="What needs to be done?" autocomplete="off" required />
+    <input type="date" id="deadline-input" required />
+    <button id="add-task-btn" type="submit">
+      <i data-lucide="plus-circle" style="margin-right: 8px;"></i> Add Task
+    </button>
+  </form>
+
+  <ul id="task-list"></ul>
+
+  <div class="filters">
+    <button class="active" data-filter="all"><i data-lucide="list-todo"></i> All</button>
+    <button data-filter="completed"><i data-lucide="check-circle"></i> Completed</button>
+    <button data-filter="incomplete"><i data-lucide="circle"></i> Incomplete</button>
+  </div>
+
+  <button id="clear-tasks">
+    <i data-lucide="trash-2" style="margin-right: 6px;"></i> Clear All Tasks
+  </button>
+</div>
+
+<button id="theme-toggle" title="Toggle Dark Mode">🌙</button>
+</div>
+<script src="script.js"></script>
+<script>
+  lucide.createIcons();
+</script>
+
+
+</body>
+</html>
