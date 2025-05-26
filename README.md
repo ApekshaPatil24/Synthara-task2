@@ -22,4 +22,4 @@ A simple and intuitive **ToDo List** web app to help you organize your daily tas
 
 1. **Clone the repository** (or download the ZIP):
    ```bash
-   git clone https://github.com/yourusername/todo-list.git
+   git clone https://github.com/ApekshaPatil24/Synthara-task2.git
